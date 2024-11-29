@@ -1,0 +1,10 @@
+version: v1
+name: google.fhir
+build:
+  roots:
+    - proto/google/fhir/proto
+  targets:
+    - plugins:
+        - name: es
+          out: fhir/proto
+          opt: target=ts

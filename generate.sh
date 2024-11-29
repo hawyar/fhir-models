@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Set up protoc
 PROTOC="protoc --plugin=./node_modules/.bin/protoc-gen-es --proto_path=. --es_out=./fhir --es_opt=target=ts"
 
 # Cleanup
@@ -28,5 +29,6 @@ $PROTOC \
 # R4 Resources
 $PROTOC ./proto/google/fhir/proto/r4/core/resources/*.proto
 
-# $PROTOC \
-#   ./proto/google/fhir/proto/r4/core/resources/bundle_and_contained_resource.proto
+# Clean up
+mv fhir/proto/google/fhir/proto/* fhir/proto
+rm -rf fhir/proto/google
