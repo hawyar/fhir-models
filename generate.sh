@@ -30,5 +30,5 @@ $PROTOC \
 $PROTOC ./proto/google/fhir/proto/r4/core/resources/*.proto
 
 # Clean up
-mv fhir/proto/google/fhir/proto/* fhir/proto
-rm -rf fhir/proto/google
+mv fhir/proto/google/fhir/proto/* fhir
+rm -rf fhir/proto
