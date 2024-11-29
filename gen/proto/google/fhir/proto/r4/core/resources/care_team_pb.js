@@ -1,0 +1,40 @@
+"use strict";
+//    Copyright 2019 Google Inc.
+//
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//
+//        https://www.apache.org/licenses/LICENSE-2.0
+//
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CareTeam_ParticipantSchema = exports.CareTeam_StatusCodeSchema = exports.CareTeamSchema = exports.file_proto_google_fhir_proto_r4_core_resources_care_team = void 0;
+var codegenv1_1 = require("@bufbuild/protobuf/codegenv1");
+var wkt_1 = require("@bufbuild/protobuf/wkt");
+var annotations_pb_1 = require("../../../annotations_pb");
+var codes_pb_1 = require("../codes_pb");
+var datatypes_pb_1 = require("../datatypes_pb");
+/**
+ * Describes the file proto/google/fhir/proto/r4/core/resources/care_team.proto.
+ */
+exports.file_proto_google_fhir_proto_r4_core_resources_care_team = (0, codegenv1_1.fileDesc)("Cjlwcm90by9nb29nbGUvZmhpci9wcm90by9yNC9jb3JlL3Jlc291cmNlcy9jYXJlX3RlYW0ucHJvdG8SE2dvb2dsZS5maGlyLnI0LmNvcmUitxAKCENhcmVUZWFtEiMKAmlkGAEgASgLMhcuZ29vZ2xlLmZoaXIucjQuY29yZS5JZBInCgRtZXRhGAIgASgLMhkuZ29vZ2xlLmZoaXIucjQuY29yZS5NZXRhEjAKDmltcGxpY2l0X3J1bGVzGAMgASgLMhguZ29vZ2xlLmZoaXIucjQuY29yZS5VcmkSKwoIbGFuZ3VhZ2UYBCABKAsyGS5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGUSLAoEdGV4dBgFIAEoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuTmFycmF0aXZlEicKCWNvbnRhaW5lZBgGIAMoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkSMQoJZXh0ZW5zaW9uGAggAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb24SOgoSbW9kaWZpZXJfZXh0ZW5zaW9uGAkgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb24SMwoKaWRlbnRpZmllchgKIAMoCzIfLmdvb2dsZS5maGlyLnI0LmNvcmUuSWRlbnRpZmllchI4CgZzdGF0dXMYCyABKAsyKC5nb29nbGUuZmhpci5yNC5jb3JlLkNhcmVUZWFtLlN0YXR1c0NvZGUSNgoIY2F0ZWdvcnkYDCADKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdBIpCgRuYW1lGA0gASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmcSSQoHc3ViamVjdBgOIAEoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuUmVmZXJlbmNlQhjy//zCBgdQYXRpZW508v/8wgYFR3JvdXASQgoJZW5jb3VudGVyGA8gASgLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCD/L//MIGCUVuY291bnRlchIrCgZwZXJpb2QYECABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlBlcmlvZBI+CgtwYXJ0aWNpcGFudBgRIAMoCzIpLmdvb2dsZS5maGlyLnI0LmNvcmUuQ2FyZVRlYW0uUGFydGljaXBhbnQSOQoLcmVhc29uX2NvZGUYEiADKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdBJJChByZWFzb25fcmVmZXJlbmNlGBMgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCD/L//MIGCUNvbmRpdGlvbhJRChVtYW5hZ2luZ19vcmdhbml6YXRpb24YFCADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUIS8v/8wgYMT3JnYW5pemF0aW9uEjIKB3RlbGVjb20YFSADKAsyIS5nb29nbGUuZmhpci5yNC5jb3JlLkNvbnRhY3RQb2ludBItCgRub3RlGBYgAygLMh8uZ29vZ2xlLmZoaXIucjQuY29yZS5Bbm5vdGF0aW9uGpMCCgpTdGF0dXNDb2RlEjwKBXZhbHVlGAEgASgOMi0uZ29vZ2xlLmZoaXIucjQuY29yZS5DYXJlVGVhbVN0YXR1c0NvZGUuVmFsdWUSJwoCaWQYAiABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxIxCglleHRlbnNpb24YAyADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbjprivmDsgUtaHR0cDovL2hsNy5vcmcvZmhpci9WYWx1ZVNldC9jYXJlLXRlYW0tc3RhdHVzwJ/jtgUBmrWOkwYsaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL2NvZGUa0wQKC1BhcnRpY2lwYW50EicKAmlkGAEgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmcSMQoJZXh0ZW5zaW9uGAIgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb24SOgoSbW9kaWZpZXJfZXh0ZW5zaW9uGAMgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb24SMgoEcm9sZRgEIAMoCzIkLmdvb2dsZS5maGlyLnI0LmNvcmUuQ29kZWFibGVDb25jZXB0EpgBCgZtZW1iZXIYBSABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUJo8v/8wgYMUHJhY3RpdGlvbmVy8v/8wgYQUHJhY3RpdGlvbmVyUm9sZfL//MIGDVJlbGF0ZWRQZXJzb27y//zCBgdQYXRpZW508v/8wgYMT3JnYW5pemF0aW9u8v/8wgYIQ2FyZVRlYW0SSAoMb25fYmVoYWxmX29mGAYgASgLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCEvL//MIGDE9yZ2FuaXphdGlvbhIrCgZwZXJpb2QYByABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlBlcmlvZDpmmoaToAhgb25CZWhhbGZPZi5leGlzdHMoKSBpbXBsaWVzIChtZW1iZXIucmVzb2x2ZSgpLmlpZihlbXB0eSgpLCB0cnVlLCBvZlR5cGUoUHJhY3RpdGlvbmVyKS5leGlzdHMoKSkpOjzAn+O2BQOy/uSXBjBodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vQ2FyZVRlYW1KBAgHEAhCeQoXY29tLmdvb2dsZS5maGlyLnI0LmNvcmVQAVpWZ2l0aHViLmNvbS9nb29nbGUvZmhpci9nby9wcm90by9nb29nbGUvZmhpci9wcm90by9yNC9jb3JlL3Jlc291cmNlcy9jYXJlX3RlYW1fZ29fcHJvdG+YxrC1BwRiBnByb3RvMw", [wkt_1.file_google_protobuf_any, annotations_pb_1.file_proto_google_fhir_proto_annotations, codes_pb_1.file_proto_google_fhir_proto_r4_core_codes, datatypes_pb_1.file_proto_google_fhir_proto_r4_core_datatypes]);
+/**
+ * Describes the message google.fhir.r4.core.CareTeam.
+ * Use `create(CareTeamSchema)` to create a new message.
+ */
+exports.CareTeamSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_care_team, 0);
+/**
+ * Describes the message google.fhir.r4.core.CareTeam.StatusCode.
+ * Use `create(CareTeam_StatusCodeSchema)` to create a new message.
+ */
+exports.CareTeam_StatusCodeSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_care_team, 0, 0);
+/**
+ * Describes the message google.fhir.r4.core.CareTeam.Participant.
+ * Use `create(CareTeam_ParticipantSchema)` to create a new message.
+ */
+exports.CareTeam_ParticipantSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_care_team, 0, 1);

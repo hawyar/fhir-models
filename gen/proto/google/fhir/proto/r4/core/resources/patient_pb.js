@@ -1,0 +1,70 @@
+"use strict";
+//    Copyright 2019 Google Inc.
+//
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//
+//        https://www.apache.org/licenses/LICENSE-2.0
+//
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Patient_Link_TypeCodeSchema = exports.Patient_LinkSchema = exports.Patient_CommunicationSchema = exports.Patient_Contact_GenderCodeSchema = exports.Patient_ContactSchema = exports.Patient_MultipleBirthXSchema = exports.Patient_DeceasedXSchema = exports.Patient_GenderCodeSchema = exports.PatientSchema = exports.file_proto_google_fhir_proto_r4_core_resources_patient = void 0;
+var codegenv1_1 = require("@bufbuild/protobuf/codegenv1");
+var wkt_1 = require("@bufbuild/protobuf/wkt");
+var annotations_pb_1 = require("../../../annotations_pb");
+var codes_pb_1 = require("../codes_pb");
+var datatypes_pb_1 = require("../datatypes_pb");
+/**
+ * Describes the file proto/google/fhir/proto/r4/core/resources/patient.proto.
+ */
+exports.file_proto_google_fhir_proto_r4_core_resources_patient = (0, codegenv1_1.fileDesc)("Cjdwcm90by9nb29nbGUvZmhpci9wcm90by9yNC9jb3JlL3Jlc291cmNlcy9wYXRpZW50LnByb3RvEhNnb29nbGUuZmhpci5yNC5jb3JlIqkdCgdQYXRpZW50EiMKAmlkGAEgASgLMhcuZ29vZ2xlLmZoaXIucjQuY29yZS5JZBInCgRtZXRhGAIgASgLMhkuZ29vZ2xlLmZoaXIucjQuY29yZS5NZXRhEjAKDmltcGxpY2l0X3J1bGVzGAMgASgLMhguZ29vZ2xlLmZoaXIucjQuY29yZS5VcmkSKwoIbGFuZ3VhZ2UYBCABKAsyGS5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGUSLAoEdGV4dBgFIAEoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuTmFycmF0aXZlEicKCWNvbnRhaW5lZBgGIAMoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkSMQoJZXh0ZW5zaW9uGAggAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb24SOgoSbW9kaWZpZXJfZXh0ZW5zaW9uGAkgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb24SMwoKaWRlbnRpZmllchgKIAMoCzIfLmdvb2dsZS5maGlyLnI0LmNvcmUuSWRlbnRpZmllchIsCgZhY3RpdmUYCyABKAsyHC5nb29nbGUuZmhpci5yNC5jb3JlLkJvb2xlYW4SLAoEbmFtZRgMIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuSHVtYW5OYW1lEjIKB3RlbGVjb20YDSADKAsyIS5nb29nbGUuZmhpci5yNC5jb3JlLkNvbnRhY3RQb2ludBI3CgZnZW5kZXIYDiABKAsyJy5nb29nbGUuZmhpci5yNC5jb3JlLlBhdGllbnQuR2VuZGVyQ29kZRItCgpiaXJ0aF9kYXRlGA8gASgLMhkuZ29vZ2xlLmZoaXIucjQuY29yZS5EYXRlEjgKCGRlY2Vhc2VkGBAgASgLMiYuZ29vZ2xlLmZoaXIucjQuY29yZS5QYXRpZW50LkRlY2Vhc2VkWBItCgdhZGRyZXNzGBEgAygLMhwuZ29vZ2xlLmZoaXIucjQuY29yZS5BZGRyZXNzEjwKDm1hcml0YWxfc3RhdHVzGBIgASgLMiQuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlYWJsZUNvbmNlcHQSQwoObXVsdGlwbGVfYmlydGgYEyABKAsyKy5nb29nbGUuZmhpci5yNC5jb3JlLlBhdGllbnQuTXVsdGlwbGVCaXJ0aFgSLgoFcGhvdG8YFCADKAsyHy5nb29nbGUuZmhpci5yNC5jb3JlLkF0dGFjaG1lbnQSNQoHY29udGFjdBgVIAMoCzIkLmdvb2dsZS5maGlyLnI0LmNvcmUuUGF0aWVudC5Db250YWN0EkEKDWNvbW11bmljYXRpb24YFiADKAsyKi5nb29nbGUuZmhpci5yNC5jb3JlLlBhdGllbnQuQ29tbXVuaWNhdGlvbhJ4ChRnZW5lcmFsX3ByYWN0aXRpb25lchgXIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuUmVmZXJlbmNlQjry//zCBgxPcmdhbml6YXRpb27y//zCBgxQcmFjdGl0aW9uZXLy//zCBhBQcmFjdGl0aW9uZXJSb2xlElEKFW1hbmFnaW5nX29yZ2FuaXphdGlvbhgYIAEoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuUmVmZXJlbmNlQhLy//zCBgxPcmdhbml6YXRpb24SLwoEbGluaxgZIAMoCzIhLmdvb2dsZS5maGlyLnI0LmNvcmUuUGF0aWVudC5MaW5rGp4CCgpHZW5kZXJDb2RlEkIKBXZhbHVlGAEgASgOMjMuZ29vZ2xlLmZoaXIucjQuY29yZS5BZG1pbmlzdHJhdGl2ZUdlbmRlckNvZGUuVmFsdWUSJwoCaWQYAiABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxIxCglleHRlbnNpb24YAyADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbjpwivmDsgUyaHR0cDovL2hsNy5vcmcvZmhpci9WYWx1ZVNldC9hZG1pbmlzdHJhdGl2ZS1nZW5kZXLAn+O2BQGatY6TBixodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vY29kZRqCAQoJRGVjZWFzZWRYEi8KB2Jvb2xlYW4YASABKAsyHC5nb29nbGUuZmhpci5yNC5jb3JlLkJvb2xlYW5IABIyCglkYXRlX3RpbWUYAiABKAsyHS5nb29nbGUuZmhpci5yNC5jb3JlLkRhdGVUaW1lSAA6BqCDg+gGAUIICgZjaG9pY2UahAEKDk11bHRpcGxlQmlydGhYEi8KB2Jvb2xlYW4YASABKAsyHC5nb29nbGUuZmhpci5yNC5jb3JlLkJvb2xlYW5IABIvCgdpbnRlZ2VyGAIgASgLMhwuZ29vZ2xlLmZoaXIucjQuY29yZS5JbnRlZ2VySAA6BqCDg+gGAUIICgZjaG9pY2UanQcKB0NvbnRhY3QSJwoCaWQYASABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxIxCglleHRlbnNpb24YAiADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbhI6ChJtb2RpZmllcl9leHRlbnNpb24YAyADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbhI6CgxyZWxhdGlvbnNoaXAYBCADKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdBIsCgRuYW1lGAUgASgLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5IdW1hbk5hbWUSMgoHdGVsZWNvbRgGIAMoCzIhLmdvb2dsZS5maGlyLnI0LmNvcmUuQ29udGFjdFBvaW50Ei0KB2FkZHJlc3MYByABKAsyHC5nb29nbGUuZmhpci5yNC5jb3JlLkFkZHJlc3MSPwoGZ2VuZGVyGAggASgLMi8uZ29vZ2xlLmZoaXIucjQuY29yZS5QYXRpZW50LkNvbnRhY3QuR2VuZGVyQ29kZRJICgxvcmdhbml6YXRpb24YCSABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUIS8v/8wgYMT3JnYW5pemF0aW9uEisKBnBlcmlvZBgKIAEoCzIbLmdvb2dsZS5maGlyLnI0LmNvcmUuUGVyaW9kGp4CCgpHZW5kZXJDb2RlEkIKBXZhbHVlGAEgASgOMjMuZ29vZ2xlLmZoaXIucjQuY29yZS5BZG1pbmlzdHJhdGl2ZUdlbmRlckNvZGUuVmFsdWUSJwoCaWQYAiABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxIxCglleHRlbnNpb24YAyADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbjpwivmDsgUyaHR0cDovL2hsNy5vcmcvZmhpci9WYWx1ZVNldC9hZG1pbmlzdHJhdGl2ZS1nZW5kZXLAn+O2BQGatY6TBixodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vY29kZTpUmoaToAhObmFtZS5leGlzdHMoKSBvciB0ZWxlY29tLmV4aXN0cygpIG9yIGFkZHJlc3MuZXhpc3RzKCkgb3Igb3JnYW5pemF0aW9uLmV4aXN0cygpGpgCCg1Db21tdW5pY2F0aW9uEicKAmlkGAEgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmcSMQoJZXh0ZW5zaW9uGAIgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb24SOgoSbW9kaWZpZXJfZXh0ZW5zaW9uGAMgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb24SPgoIbGFuZ3VhZ2UYBCABKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdEIG8NCH6wQBEi8KCXByZWZlcnJlZBgFIAEoCzIcLmdvb2dsZS5maGlyLnI0LmNvcmUuQm9vbGVhbhq+BAoETGluaxInCgJpZBgBIAEoCzIbLmdvb2dsZS5maGlyLnI0LmNvcmUuU3RyaW5nEjEKCWV4dGVuc2lvbhgCIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEjoKEm1vZGlmaWVyX2V4dGVuc2lvbhgDIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uElUKBW90aGVyGAQgASgLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCJvDQh+sEAfL//MIGB1BhdGllbnTy//zCBg1SZWxhdGVkUGVyc29uEkAKBHR5cGUYBSABKAsyKi5nb29nbGUuZmhpci5yNC5jb3JlLlBhdGllbnQuTGluay5UeXBlQ29kZUIG8NCH6wQBGoQCCghUeXBlQ29kZRI2CgV2YWx1ZRgBIAEoDjInLmdvb2dsZS5maGlyLnI0LmNvcmUuTGlua1R5cGVDb2RlLlZhbHVlEicKAmlkGAIgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmcSMQoJZXh0ZW5zaW9uGAMgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb246ZIr5g7IFJmh0dHA6Ly9obDcub3JnL2ZoaXIvVmFsdWVTZXQvbGluay10eXBlwJ/jtgUBmrWOkwYsaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL2NvZGU6O8Cf47YFA7L+5JcGL2h0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9QYXRpZW50SgQIBxAIQncKF2NvbS5nb29nbGUuZmhpci5yNC5jb3JlUAFaVGdpdGh1Yi5jb20vZ29vZ2xlL2ZoaXIvZ28vcHJvdG8vZ29vZ2xlL2ZoaXIvcHJvdG8vcjQvY29yZS9yZXNvdXJjZXMvcGF0aWVudF9nb19wcm90b5jGsLUHBGIGcHJvdG8z", [wkt_1.file_google_protobuf_any, annotations_pb_1.file_proto_google_fhir_proto_annotations, codes_pb_1.file_proto_google_fhir_proto_r4_core_codes, datatypes_pb_1.file_proto_google_fhir_proto_r4_core_datatypes]);
+/**
+ * Describes the message google.fhir.r4.core.Patient.
+ * Use `create(PatientSchema)` to create a new message.
+ */
+exports.PatientSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_patient, 0);
+/**
+ * Describes the message google.fhir.r4.core.Patient.GenderCode.
+ * Use `create(Patient_GenderCodeSchema)` to create a new message.
+ */
+exports.Patient_GenderCodeSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_patient, 0, 0);
+/**
+ * Describes the message google.fhir.r4.core.Patient.DeceasedX.
+ * Use `create(Patient_DeceasedXSchema)` to create a new message.
+ */
+exports.Patient_DeceasedXSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_patient, 0, 1);
+/**
+ * Describes the message google.fhir.r4.core.Patient.MultipleBirthX.
+ * Use `create(Patient_MultipleBirthXSchema)` to create a new message.
+ */
+exports.Patient_MultipleBirthXSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_patient, 0, 2);
+/**
+ * Describes the message google.fhir.r4.core.Patient.Contact.
+ * Use `create(Patient_ContactSchema)` to create a new message.
+ */
+exports.Patient_ContactSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_patient, 0, 3);
+/**
+ * Describes the message google.fhir.r4.core.Patient.Contact.GenderCode.
+ * Use `create(Patient_Contact_GenderCodeSchema)` to create a new message.
+ */
+exports.Patient_Contact_GenderCodeSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_patient, 0, 3, 0);
+/**
+ * Describes the message google.fhir.r4.core.Patient.Communication.
+ * Use `create(Patient_CommunicationSchema)` to create a new message.
+ */
+exports.Patient_CommunicationSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_patient, 0, 4);
+/**
+ * Describes the message google.fhir.r4.core.Patient.Link.
+ * Use `create(Patient_LinkSchema)` to create a new message.
+ */
+exports.Patient_LinkSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_patient, 0, 5);
+/**
+ * Describes the message google.fhir.r4.core.Patient.Link.TypeCode.
+ * Use `create(Patient_Link_TypeCodeSchema)` to create a new message.
+ */
+exports.Patient_Link_TypeCodeSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_patient, 0, 5, 0);

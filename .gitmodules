@@ -1,0 +1,6 @@
+[submodule "proto"]
+    path = proto
+    url = https://github.com/google/fhir.git
+    shallow-submodules = true
+    ignore = dirty
+    sparse-checkout = proto

@@ -1,0 +1,55 @@
+"use strict";
+//    Copyright 2019 Google Inc.
+//
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//
+//        https://www.apache.org/licenses/LICENSE-2.0
+//
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Goal_Target_DueXSchema = exports.Goal_Target_DetailXSchema = exports.Goal_TargetSchema = exports.Goal_StartXSchema = exports.Goal_LifecycleStatusCodeSchema = exports.GoalSchema = exports.file_proto_google_fhir_proto_r4_core_resources_goal = void 0;
+var codegenv1_1 = require("@bufbuild/protobuf/codegenv1");
+var wkt_1 = require("@bufbuild/protobuf/wkt");
+var annotations_pb_1 = require("../../../annotations_pb");
+var codes_pb_1 = require("../codes_pb");
+var datatypes_pb_1 = require("../datatypes_pb");
+/**
+ * Describes the file proto/google/fhir/proto/r4/core/resources/goal.proto.
+ */
+exports.file_proto_google_fhir_proto_r4_core_resources_goal = (0, codegenv1_1.fileDesc)("CjRwcm90by9nb29nbGUvZmhpci9wcm90by9yNC9jb3JlL3Jlc291cmNlcy9nb2FsLnByb3RvEhNnb29nbGUuZmhpci5yNC5jb3JlIv4WCgRHb2FsEiMKAmlkGAEgASgLMhcuZ29vZ2xlLmZoaXIucjQuY29yZS5JZBInCgRtZXRhGAIgASgLMhkuZ29vZ2xlLmZoaXIucjQuY29yZS5NZXRhEjAKDmltcGxpY2l0X3J1bGVzGAMgASgLMhguZ29vZ2xlLmZoaXIucjQuY29yZS5VcmkSKwoIbGFuZ3VhZ2UYBCABKAsyGS5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGUSLAoEdGV4dBgFIAEoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuTmFycmF0aXZlEicKCWNvbnRhaW5lZBgGIAMoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkSMQoJZXh0ZW5zaW9uGAggAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb24SOgoSbW9kaWZpZXJfZXh0ZW5zaW9uGAkgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb24SMwoKaWRlbnRpZmllchgKIAMoCzIfLmdvb2dsZS5maGlyLnI0LmNvcmUuSWRlbnRpZmllchJPChBsaWZlY3ljbGVfc3RhdHVzGAsgASgLMi0uZ29vZ2xlLmZoaXIucjQuY29yZS5Hb2FsLkxpZmVjeWNsZVN0YXR1c0NvZGVCBvDQh+sEARJAChJhY2hpZXZlbWVudF9zdGF0dXMYDCABKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdBI2CghjYXRlZ29yeRgNIAMoCzIkLmdvb2dsZS5maGlyLnI0LmNvcmUuQ29kZWFibGVDb25jZXB0EjYKCHByaW9yaXR5GA4gASgLMiQuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlYWJsZUNvbmNlcHQSQQoLZGVzY3JpcHRpb24YDyABKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdEIG8NCH6wQBEmEKB3N1YmplY3QYECABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUIw8NCH6wQB8v/8wgYHUGF0aWVudPL//MIGBUdyb3Vw8v/8wgYMT3JnYW5pemF0aW9uEi8KBXN0YXJ0GBEgASgLMiAuZ29vZ2xlLmZoaXIucjQuY29yZS5Hb2FsLlN0YXJ0WBIwCgZ0YXJnZXQYEiADKAsyIC5nb29nbGUuZmhpci5yNC5jb3JlLkdvYWwuVGFyZ2V0Ei4KC3N0YXR1c19kYXRlGBMgASgLMhkuZ29vZ2xlLmZoaXIucjQuY29yZS5EYXRlEjIKDXN0YXR1c19yZWFzb24YFCABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxJ+CgxleHByZXNzZWRfYnkYFSABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUJI8v/8wgYHUGF0aWVudPL//MIGDFByYWN0aXRpb25lcvL//MIGEFByYWN0aXRpb25lclJvbGXy//zCBg1SZWxhdGVkUGVyc29uEqgBCglhZGRyZXNzZXMYFiADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUJ18v/8wgYJQ29uZGl0aW9u8v/8wgYLT2JzZXJ2YXRpb27y//zCBhNNZWRpY2F0aW9uU3RhdGVtZW508v/8wgYOTnV0cml0aW9uT3JkZXLy//zCBg5TZXJ2aWNlUmVxdWVzdPL//MIGDlJpc2tBc3Nlc3NtZW50Ei0KBG5vdGUYFyADKAsyHy5nb29nbGUuZmhpci5yNC5jb3JlLkFubm90YXRpb24SOgoMb3V0Y29tZV9jb2RlGBggAygLMiQuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlYWJsZUNvbmNlcHQSTAoRb3V0Y29tZV9yZWZlcmVuY2UYGSADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUIR8v/8wgYLT2JzZXJ2YXRpb24anAIKE0xpZmVjeWNsZVN0YXR1c0NvZGUSQQoFdmFsdWUYASABKA4yMi5nb29nbGUuZmhpci5yNC5jb3JlLkdvYWxMaWZlY3ljbGVTdGF0dXNDb2RlLlZhbHVlEicKAmlkGAIgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmcSMQoJZXh0ZW5zaW9uGAMgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb246Zor5g7IFKGh0dHA6Ly9obDcub3JnL2ZoaXIvVmFsdWVTZXQvZ29hbC1zdGF0dXPAn+O2BQGatY6TBixodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vY29kZRqHAQoGU3RhcnRYEikKBGRhdGUYASABKAsyGS5nb29nbGUuZmhpci5yNC5jb3JlLkRhdGVIABJAChBjb2RlYWJsZV9jb25jZXB0GAIgASgLMiQuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlYWJsZUNvbmNlcHRIADoGoIOD6AYBQggKBmNob2ljZRqQBwoGVGFyZ2V0EicKAmlkGAEgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmcSMQoJZXh0ZW5zaW9uGAIgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb24SOgoSbW9kaWZpZXJfZXh0ZW5zaW9uGAMgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb24SNQoHbWVhc3VyZRgEIAEoCzIkLmdvb2dsZS5maGlyLnI0LmNvcmUuQ29kZWFibGVDb25jZXB0EjgKBmRldGFpbBgFIAEoCzIoLmdvb2dsZS5maGlyLnI0LmNvcmUuR29hbC5UYXJnZXQuRGV0YWlsWBIyCgNkdWUYBiABKAsyJS5nb29nbGUuZmhpci5yNC5jb3JlLkdvYWwuVGFyZ2V0LkR1ZVgaiQMKB0RldGFpbFgSMQoIcXVhbnRpdHkYASABKAsyHS5nb29nbGUuZmhpci5yNC5jb3JlLlF1YW50aXR5SAASKwoFcmFuZ2UYAiABKAsyGi5nb29nbGUuZmhpci5yNC5jb3JlLlJhbmdlSAASQAoQY29kZWFibGVfY29uY2VwdBgDIAEoCzIkLmdvb2dsZS5maGlyLnI0LmNvcmUuQ29kZWFibGVDb25jZXB0SAASOwoMc3RyaW5nX3ZhbHVlGAQgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmdIAFIGc3RyaW5nEi8KB2Jvb2xlYW4YBSABKAsyHC5nb29nbGUuZmhpci5yNC5jb3JlLkJvb2xlYW5IABIvCgdpbnRlZ2VyGAYgASgLMhwuZ29vZ2xlLmZoaXIucjQuY29yZS5JbnRlZ2VySAASKwoFcmF0aW8YByABKAsyGi5nb29nbGUuZmhpci5yNC5jb3JlLlJhdGlvSAA6BqCDg+gGAUIICgZjaG9pY2UadgoERHVlWBIpCgRkYXRlGAEgASgLMhkuZ29vZ2xlLmZoaXIucjQuY29yZS5EYXRlSAASMQoIZHVyYXRpb24YAiABKAsyHS5nb29nbGUuZmhpci5yNC5jb3JlLkR1cmF0aW9uSAA6BqCDg+gGAUIICgZjaG9pY2U6RZqGk6AIPyhkZXRhaWwuZXhpc3RzKCkgYW5kIG1lYXN1cmUuZXhpc3RzKCkpIG9yIGRldGFpbC5leGlzdHMoKS5ub3QoKTo4wJ/jtgUDsv7klwYsaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL0dvYWxKBAgHEAhCdAoXY29tLmdvb2dsZS5maGlyLnI0LmNvcmVQAVpRZ2l0aHViLmNvbS9nb29nbGUvZmhpci9nby9wcm90by9nb29nbGUvZmhpci9wcm90by9yNC9jb3JlL3Jlc291cmNlcy9nb2FsX2dvX3Byb3RvmMawtQcEYgZwcm90bzM", [wkt_1.file_google_protobuf_any, annotations_pb_1.file_proto_google_fhir_proto_annotations, codes_pb_1.file_proto_google_fhir_proto_r4_core_codes, datatypes_pb_1.file_proto_google_fhir_proto_r4_core_datatypes]);
+/**
+ * Describes the message google.fhir.r4.core.Goal.
+ * Use `create(GoalSchema)` to create a new message.
+ */
+exports.GoalSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_goal, 0);
+/**
+ * Describes the message google.fhir.r4.core.Goal.LifecycleStatusCode.
+ * Use `create(Goal_LifecycleStatusCodeSchema)` to create a new message.
+ */
+exports.Goal_LifecycleStatusCodeSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_goal, 0, 0);
+/**
+ * Describes the message google.fhir.r4.core.Goal.StartX.
+ * Use `create(Goal_StartXSchema)` to create a new message.
+ */
+exports.Goal_StartXSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_goal, 0, 1);
+/**
+ * Describes the message google.fhir.r4.core.Goal.Target.
+ * Use `create(Goal_TargetSchema)` to create a new message.
+ */
+exports.Goal_TargetSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_goal, 0, 2);
+/**
+ * Describes the message google.fhir.r4.core.Goal.Target.DetailX.
+ * Use `create(Goal_Target_DetailXSchema)` to create a new message.
+ */
+exports.Goal_Target_DetailXSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_goal, 0, 2, 0);
+/**
+ * Describes the message google.fhir.r4.core.Goal.Target.DueX.
+ * Use `create(Goal_Target_DueXSchema)` to create a new message.
+ */
+exports.Goal_Target_DueXSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_goal, 0, 2, 1);

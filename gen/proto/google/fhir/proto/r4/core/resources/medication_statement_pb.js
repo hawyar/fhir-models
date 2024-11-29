@@ -1,0 +1,45 @@
+"use strict";
+//    Copyright 2019 Google Inc.
+//
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//
+//        https://www.apache.org/licenses/LICENSE-2.0
+//
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationStatement_EffectiveXSchema = exports.MedicationStatement_MedicationXSchema = exports.MedicationStatement_StatusCodeSchema = exports.MedicationStatementSchema = exports.file_proto_google_fhir_proto_r4_core_resources_medication_statement = void 0;
+var codegenv1_1 = require("@bufbuild/protobuf/codegenv1");
+var wkt_1 = require("@bufbuild/protobuf/wkt");
+var annotations_pb_1 = require("../../../annotations_pb");
+var codes_pb_1 = require("../codes_pb");
+var datatypes_pb_1 = require("../datatypes_pb");
+/**
+ * Describes the file proto/google/fhir/proto/r4/core/resources/medication_statement.proto.
+ */
+exports.file_proto_google_fhir_proto_r4_core_resources_medication_statement = (0, codegenv1_1.fileDesc)("CkRwcm90by9nb29nbGUvZmhpci9wcm90by9yNC9jb3JlL3Jlc291cmNlcy9tZWRpY2F0aW9uX3N0YXRlbWVudC5wcm90bxITZ29vZ2xlLmZoaXIucjQuY29yZSKYEwoTTWVkaWNhdGlvblN0YXRlbWVudBIjCgJpZBgBIAEoCzIXLmdvb2dsZS5maGlyLnI0LmNvcmUuSWQSJwoEbWV0YRgCIAEoCzIZLmdvb2dsZS5maGlyLnI0LmNvcmUuTWV0YRIwCg5pbXBsaWNpdF9ydWxlcxgDIAEoCzIYLmdvb2dsZS5maGlyLnI0LmNvcmUuVXJpEisKCGxhbmd1YWdlGAQgASgLMhkuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlEiwKBHRleHQYBSABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLk5hcnJhdGl2ZRInCgljb250YWluZWQYBiADKAsyFC5nb29nbGUucHJvdG9idWYuQW55EjEKCWV4dGVuc2lvbhgIIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEjoKEm1vZGlmaWVyX2V4dGVuc2lvbhgJIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEjMKCmlkZW50aWZpZXIYCiADKAsyHy5nb29nbGUuZmhpci5yNC5jb3JlLklkZW50aWZpZXISawoIYmFzZWRfb24YCyADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUI58v/8wgYRTWVkaWNhdGlvblJlcXVlc3Ty//zCBghDYXJlUGxhbvL//MIGDlNlcnZpY2VSZXF1ZXN0EqABCgdwYXJ0X29mGAwgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCb/L//MIGGE1lZGljYXRpb25BZG1pbmlzdHJhdGlvbvL//MIGEk1lZGljYXRpb25EaXNwZW5zZfL//MIGE01lZGljYXRpb25TdGF0ZW1lbnTy//zCBglQcm9jZWR1cmXy//zCBgtPYnNlcnZhdGlvbhJLCgZzdGF0dXMYDSABKAsyMy5nb29nbGUuZmhpci5yNC5jb3JlLk1lZGljYXRpb25TdGF0ZW1lbnQuU3RhdHVzQ29kZUIG8NCH6wQBEjsKDXN0YXR1c19yZWFzb24YDiADKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdBI2CghjYXRlZ29yeRgPIAEoCzIkLmdvb2dsZS5maGlyLnI0LmNvcmUuQ29kZWFibGVDb25jZXB0ElAKCm1lZGljYXRpb24YECABKAsyNC5nb29nbGUuZmhpci5yNC5jb3JlLk1lZGljYXRpb25TdGF0ZW1lbnQuTWVkaWNhdGlvblhCBvDQh+sEARJPCgdzdWJqZWN0GBEgASgLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCHvDQh+sEAfL//MIGB1BhdGllbnTy//zCBgVHcm91cBJTCgdjb250ZXh0GBIgASgLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCIvL//MIGCUVuY291bnRlcvL//MIGDUVwaXNvZGVPZkNhcmUSRgoJZWZmZWN0aXZlGBMgASgLMjMuZ29vZ2xlLmZoaXIucjQuY29yZS5NZWRpY2F0aW9uU3RhdGVtZW50LkVmZmVjdGl2ZVgSNAoNZGF0ZV9hc3NlcnRlZBgUIAEoCzIdLmdvb2dsZS5maGlyLnI0LmNvcmUuRGF0ZVRpbWUSlgEKEmluZm9ybWF0aW9uX3NvdXJjZRgVIAEoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuUmVmZXJlbmNlQlry//zCBgdQYXRpZW508v/8wgYMUHJhY3RpdGlvbmVy8v/8wgYQUHJhY3RpdGlvbmVyUm9sZfL//MIGDVJlbGF0ZWRQZXJzb27y//zCBgxPcmdhbml6YXRpb24SRAoMZGVyaXZlZF9mcm9tGBYgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCDvL//MIGCFJlc291cmNlEjkKC3JlYXNvbl9jb2RlGBcgAygLMiQuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlYWJsZUNvbmNlcHQScAoQcmVhc29uX3JlZmVyZW5jZRgYIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuUmVmZXJlbmNlQjby//zCBglDb25kaXRpb27y//zCBgtPYnNlcnZhdGlvbvL//MIGEERpYWdub3N0aWNSZXBvcnQSLQoEbm90ZRgZIAMoCzIfLmdvb2dsZS5maGlyLnI0LmNvcmUuQW5ub3RhdGlvbhIrCgZkb3NhZ2UYGiADKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLkRvc2FnZRqqAgoKU3RhdHVzQ29kZRJICgV2YWx1ZRgBIAEoDjI5Lmdvb2dsZS5maGlyLnI0LmNvcmUuTWVkaWNhdGlvblN0YXRlbWVudFN0YXR1c0NvZGVzLlZhbHVlEicKAmlkGAIgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmcSMQoJZXh0ZW5zaW9uGAMgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb246dor5g7IFOGh0dHA6Ly9obDcub3JnL2ZoaXIvVmFsdWVTZXQvbWVkaWNhdGlvbi1zdGF0ZW1lbnQtc3RhdHVzwJ/jtgUBmrWOkwYsaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL2NvZGUaqAEKC01lZGljYXRpb25YEkAKEGNvZGVhYmxlX2NvbmNlcHQYASABKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdEgAEkUKCXJlZmVyZW5jZRgCIAEoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuUmVmZXJlbmNlQhDy//zCBgpNZWRpY2F0aW9uSAA6BqCDg+gGAUIICgZjaG9pY2UagQEKCkVmZmVjdGl2ZVgSMgoJZGF0ZV90aW1lGAEgASgLMh0uZ29vZ2xlLmZoaXIucjQuY29yZS5EYXRlVGltZUgAEi0KBnBlcmlvZBgCIAEoCzIbLmdvb2dsZS5maGlyLnI0LmNvcmUuUGVyaW9kSAA6BqCDg+gGAUIICgZjaG9pY2U6R8Cf47YFA7L+5JcGO2h0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9NZWRpY2F0aW9uU3RhdGVtZW50SgQIBxAIQoQBChdjb20uZ29vZ2xlLmZoaXIucjQuY29yZVABWmFnaXRodWIuY29tL2dvb2dsZS9maGlyL2dvL3Byb3RvL2dvb2dsZS9maGlyL3Byb3RvL3I0L2NvcmUvcmVzb3VyY2VzL21lZGljYXRpb25fc3RhdGVtZW50X2dvX3Byb3RvmMawtQcEYgZwcm90bzM", [wkt_1.file_google_protobuf_any, annotations_pb_1.file_proto_google_fhir_proto_annotations, codes_pb_1.file_proto_google_fhir_proto_r4_core_codes, datatypes_pb_1.file_proto_google_fhir_proto_r4_core_datatypes]);
+/**
+ * Describes the message google.fhir.r4.core.MedicationStatement.
+ * Use `create(MedicationStatementSchema)` to create a new message.
+ */
+exports.MedicationStatementSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_medication_statement, 0);
+/**
+ * Describes the message google.fhir.r4.core.MedicationStatement.StatusCode.
+ * Use `create(MedicationStatement_StatusCodeSchema)` to create a new message.
+ */
+exports.MedicationStatement_StatusCodeSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_medication_statement, 0, 0);
+/**
+ * Describes the message google.fhir.r4.core.MedicationStatement.MedicationX.
+ * Use `create(MedicationStatement_MedicationXSchema)` to create a new message.
+ */
+exports.MedicationStatement_MedicationXSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_medication_statement, 0, 1);
+/**
+ * Describes the message google.fhir.r4.core.MedicationStatement.EffectiveX.
+ * Use `create(MedicationStatement_EffectiveXSchema)` to create a new message.
+ */
+exports.MedicationStatement_EffectiveXSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_medication_statement, 0, 2);

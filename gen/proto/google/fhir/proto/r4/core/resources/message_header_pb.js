@@ -1,0 +1,55 @@
+"use strict";
+//    Copyright 2019 Google Inc.
+//
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//
+//        https://www.apache.org/licenses/LICENSE-2.0
+//
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageHeader_Response_CodeTypeSchema = exports.MessageHeader_ResponseSchema = exports.MessageHeader_MessageSourceSchema = exports.MessageHeader_MessageDestinationSchema = exports.MessageHeader_EventXSchema = exports.MessageHeaderSchema = exports.file_proto_google_fhir_proto_r4_core_resources_message_header = void 0;
+var codegenv1_1 = require("@bufbuild/protobuf/codegenv1");
+var wkt_1 = require("@bufbuild/protobuf/wkt");
+var annotations_pb_1 = require("../../../annotations_pb");
+var codes_pb_1 = require("../codes_pb");
+var datatypes_pb_1 = require("../datatypes_pb");
+/**
+ * Describes the file proto/google/fhir/proto/r4/core/resources/message_header.proto.
+ */
+exports.file_proto_google_fhir_proto_r4_core_resources_message_header = (0, codegenv1_1.fileDesc)("Cj5wcm90by9nb29nbGUvZmhpci9wcm90by9yNC9jb3JlL3Jlc291cmNlcy9tZXNzYWdlX2hlYWRlci5wcm90bxITZ29vZ2xlLmZoaXIucjQuY29yZSLjFgoNTWVzc2FnZUhlYWRlchIjCgJpZBgBIAEoCzIXLmdvb2dsZS5maGlyLnI0LmNvcmUuSWQSJwoEbWV0YRgCIAEoCzIZLmdvb2dsZS5maGlyLnI0LmNvcmUuTWV0YRIwCg5pbXBsaWNpdF9ydWxlcxgDIAEoCzIYLmdvb2dsZS5maGlyLnI0LmNvcmUuVXJpEisKCGxhbmd1YWdlGAQgASgLMhkuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlEiwKBHRleHQYBSABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLk5hcnJhdGl2ZRInCgljb250YWluZWQYBiADKAsyFC5nb29nbGUucHJvdG9idWYuQW55EjEKCWV4dGVuc2lvbhgIIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEjoKEm1vZGlmaWVyX2V4dGVuc2lvbhgJIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEkAKBWV2ZW50GAogASgLMikuZ29vZ2xlLmZoaXIucjQuY29yZS5NZXNzYWdlSGVhZGVyLkV2ZW50WEIG8NCH6wQBEkoKC2Rlc3RpbmF0aW9uGAsgAygLMjUuZ29vZ2xlLmZoaXIucjQuY29yZS5NZXNzYWdlSGVhZGVyLk1lc3NhZ2VEZXN0aW5hdGlvbhJqCgZzZW5kZXIYDCABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUI68v/8wgYMUHJhY3RpdGlvbmVy8v/8wgYQUHJhY3RpdGlvbmVyUm9sZfL//MIGDE9yZ2FuaXphdGlvbhJZCgdlbnRlcmVyGA0gASgLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCKPL//MIGDFByYWN0aXRpb25lcvL//MIGEFByYWN0aXRpb25lclJvbGUSWAoGYXV0aG9yGA4gASgLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCKPL//MIGDFByYWN0aXRpb25lcvL//MIGEFByYWN0aXRpb25lclJvbGUSSAoGc291cmNlGA8gASgLMjAuZ29vZ2xlLmZoaXIucjQuY29yZS5NZXNzYWdlSGVhZGVyLk1lc3NhZ2VTb3VyY2VCBvDQh+sEARJvCgtyZXNwb25zaWJsZRgQIAEoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuUmVmZXJlbmNlQjry//zCBgxQcmFjdGl0aW9uZXLy//zCBhBQcmFjdGl0aW9uZXJSb2xl8v/8wgYMT3JnYW5pemF0aW9uEjQKBnJlYXNvbhgRIAEoCzIkLmdvb2dsZS5maGlyLnI0LmNvcmUuQ29kZWFibGVDb25jZXB0Ej0KCHJlc3BvbnNlGBIgASgLMisuZ29vZ2xlLmZoaXIucjQuY29yZS5NZXNzYWdlSGVhZGVyLlJlc3BvbnNlEj0KBWZvY3VzGBMgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCDvL//MIGCFJlc291cmNlEjIKCmRlZmluaXRpb24YFCABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkNhbm9uaWNhbBpyCgZFdmVudFgSLQoGY29kaW5nGAEgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RpbmdIABInCgN1cmkYAiABKAsyGC5nb29nbGUuZmhpci5yNC5jb3JlLlVyaUgAOgagg4PoBgFCCAoGY2hvaWNlGrcDChJNZXNzYWdlRGVzdGluYXRpb24SJwoCaWQYASABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxIxCglleHRlbnNpb24YAiADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbhI6ChJtb2RpZmllcl9leHRlbnNpb24YAyADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbhIpCgRuYW1lGAQgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmcSPAoGdGFyZ2V0GAUgASgLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCDPL//MIGBkRldmljZRIyCghlbmRwb2ludBgGIAEoCzIYLmdvb2dsZS5maGlyLnI0LmNvcmUuVXJsQgbw0IfrBAESbAoIcmVjZWl2ZXIYByABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUI68v/8wgYMUHJhY3RpdGlvbmVy8v/8wgYQUHJhY3RpdGlvbmVyUm9sZfL//MIGDE9yZ2FuaXphdGlvbhqXAwoNTWVzc2FnZVNvdXJjZRInCgJpZBgBIAEoCzIbLmdvb2dsZS5maGlyLnI0LmNvcmUuU3RyaW5nEjEKCWV4dGVuc2lvbhgCIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEjoKEm1vZGlmaWVyX2V4dGVuc2lvbhgDIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEikKBG5hbWUYBCABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxItCghzb2Z0d2FyZRgFIAEoCzIbLmdvb2dsZS5maGlyLnI0LmNvcmUuU3RyaW5nEiwKB3ZlcnNpb24YBiABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxIyCgdjb250YWN0GAcgASgLMiEuZ29vZ2xlLmZoaXIucjQuY29yZS5Db250YWN0UG9pbnQSMgoIZW5kcG9pbnQYCCABKAsyGC5nb29nbGUuZmhpci5yNC5jb3JlLlVybEIG8NCH6wQBGvsECghSZXNwb25zZRInCgJpZBgBIAEoCzIbLmdvb2dsZS5maGlyLnI0LmNvcmUuU3RyaW5nEjEKCWV4dGVuc2lvbhgCIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEjoKEm1vZGlmaWVyX2V4dGVuc2lvbhgDIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEjMKCmlkZW50aWZpZXIYBCABKAsyFy5nb29nbGUuZmhpci5yNC5jb3JlLklkQgbw0IfrBAESSgoEY29kZRgFIAEoCzI0Lmdvb2dsZS5maGlyLnI0LmNvcmUuTWVzc2FnZUhlYWRlci5SZXNwb25zZS5Db2RlVHlwZUIG8NCH6wQBEkcKB2RldGFpbHMYBiABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUIW8v/8wgYQT3BlcmF0aW9uT3V0Y29tZRqMAgoIQ29kZVR5cGUSOgoFdmFsdWUYASABKA4yKy5nb29nbGUuZmhpci5yNC5jb3JlLlJlc3BvbnNlVHlwZUNvZGUuVmFsdWUSJwoCaWQYAiABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxIxCglleHRlbnNpb24YAyADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbjpoivmDsgUqaHR0cDovL2hsNy5vcmcvZmhpci9WYWx1ZVNldC9yZXNwb25zZS1jb2RlwJ/jtgUBmrWOkwYsaHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL2NvZGU6QcCf47YFA7L+5JcGNWh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9NZXNzYWdlSGVhZGVySgQIBxAIQn4KF2NvbS5nb29nbGUuZmhpci5yNC5jb3JlUAFaW2dpdGh1Yi5jb20vZ29vZ2xlL2ZoaXIvZ28vcHJvdG8vZ29vZ2xlL2ZoaXIvcHJvdG8vcjQvY29yZS9yZXNvdXJjZXMvbWVzc2FnZV9oZWFkZXJfZ29fcHJvdG+YxrC1BwRiBnByb3RvMw", [wkt_1.file_google_protobuf_any, annotations_pb_1.file_proto_google_fhir_proto_annotations, codes_pb_1.file_proto_google_fhir_proto_r4_core_codes, datatypes_pb_1.file_proto_google_fhir_proto_r4_core_datatypes]);
+/**
+ * Describes the message google.fhir.r4.core.MessageHeader.
+ * Use `create(MessageHeaderSchema)` to create a new message.
+ */
+exports.MessageHeaderSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_message_header, 0);
+/**
+ * Describes the message google.fhir.r4.core.MessageHeader.EventX.
+ * Use `create(MessageHeader_EventXSchema)` to create a new message.
+ */
+exports.MessageHeader_EventXSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_message_header, 0, 0);
+/**
+ * Describes the message google.fhir.r4.core.MessageHeader.MessageDestination.
+ * Use `create(MessageHeader_MessageDestinationSchema)` to create a new message.
+ */
+exports.MessageHeader_MessageDestinationSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_message_header, 0, 1);
+/**
+ * Describes the message google.fhir.r4.core.MessageHeader.MessageSource.
+ * Use `create(MessageHeader_MessageSourceSchema)` to create a new message.
+ */
+exports.MessageHeader_MessageSourceSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_message_header, 0, 2);
+/**
+ * Describes the message google.fhir.r4.core.MessageHeader.Response.
+ * Use `create(MessageHeader_ResponseSchema)` to create a new message.
+ */
+exports.MessageHeader_ResponseSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_message_header, 0, 3);
+/**
+ * Describes the message google.fhir.r4.core.MessageHeader.Response.CodeType.
+ * Use `create(MessageHeader_Response_CodeTypeSchema)` to create a new message.
+ */
+exports.MessageHeader_Response_CodeTypeSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_message_header, 0, 3, 0);

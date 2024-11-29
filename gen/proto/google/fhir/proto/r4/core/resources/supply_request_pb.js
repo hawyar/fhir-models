@@ -1,0 +1,60 @@
+"use strict";
+//    Copyright 2019 Google Inc.
+//
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//
+//        https://www.apache.org/licenses/LICENSE-2.0
+//
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupplyRequest_OccurrenceXSchema = exports.SupplyRequest_Parameter_ValueXSchema = exports.SupplyRequest_ParameterSchema = exports.SupplyRequest_ItemXSchema = exports.SupplyRequest_PriorityCodeSchema = exports.SupplyRequest_StatusCodeSchema = exports.SupplyRequestSchema = exports.file_proto_google_fhir_proto_r4_core_resources_supply_request = void 0;
+var codegenv1_1 = require("@bufbuild/protobuf/codegenv1");
+var wkt_1 = require("@bufbuild/protobuf/wkt");
+var annotations_pb_1 = require("../../../annotations_pb");
+var codes_pb_1 = require("../codes_pb");
+var datatypes_pb_1 = require("../datatypes_pb");
+/**
+ * Describes the file proto/google/fhir/proto/r4/core/resources/supply_request.proto.
+ */
+exports.file_proto_google_fhir_proto_r4_core_resources_supply_request = (0, codegenv1_1.fileDesc)("Cj5wcm90by9nb29nbGUvZmhpci9wcm90by9yNC9jb3JlL3Jlc291cmNlcy9zdXBwbHlfcmVxdWVzdC5wcm90bxITZ29vZ2xlLmZoaXIucjQuY29yZSKfGAoNU3VwcGx5UmVxdWVzdBIjCgJpZBgBIAEoCzIXLmdvb2dsZS5maGlyLnI0LmNvcmUuSWQSJwoEbWV0YRgCIAEoCzIZLmdvb2dsZS5maGlyLnI0LmNvcmUuTWV0YRIwCg5pbXBsaWNpdF9ydWxlcxgDIAEoCzIYLmdvb2dsZS5maGlyLnI0LmNvcmUuVXJpEisKCGxhbmd1YWdlGAQgASgLMhkuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlEiwKBHRleHQYBSABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLk5hcnJhdGl2ZRInCgljb250YWluZWQYBiADKAsyFC5nb29nbGUucHJvdG9idWYuQW55EjEKCWV4dGVuc2lvbhgIIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEjoKEm1vZGlmaWVyX2V4dGVuc2lvbhgJIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEjMKCmlkZW50aWZpZXIYCiADKAsyHy5nb29nbGUuZmhpci5yNC5jb3JlLklkZW50aWZpZXISPQoGc3RhdHVzGAsgASgLMi0uZ29vZ2xlLmZoaXIucjQuY29yZS5TdXBwbHlSZXF1ZXN0LlN0YXR1c0NvZGUSNgoIY2F0ZWdvcnkYDCABKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdBJBCghwcmlvcml0eRgNIAEoCzIvLmdvb2dsZS5maGlyLnI0LmNvcmUuU3VwcGx5UmVxdWVzdC5Qcmlvcml0eUNvZGUSPgoEaXRlbRgOIAEoCzIoLmdvb2dsZS5maGlyLnI0LmNvcmUuU3VwcGx5UmVxdWVzdC5JdGVtWEIG8NCH6wQBEjcKCHF1YW50aXR5GA8gASgLMh0uZ29vZ2xlLmZoaXIucjQuY29yZS5RdWFudGl0eUIG8NCH6wQBEj8KCXBhcmFtZXRlchgQIAMoCzIsLmdvb2dsZS5maGlyLnI0LmNvcmUuU3VwcGx5UmVxdWVzdC5QYXJhbWV0ZXISQgoKb2NjdXJyZW5jZRgRIAEoCzIuLmdvb2dsZS5maGlyLnI0LmNvcmUuU3VwcGx5UmVxdWVzdC5PY2N1cnJlbmNlWBIyCgthdXRob3JlZF9vbhgSIAEoCzIdLmdvb2dsZS5maGlyLnI0LmNvcmUuRGF0ZVRpbWUSmQEKCXJlcXVlc3RlchgTIAEoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuUmVmZXJlbmNlQmby//zCBgxQcmFjdGl0aW9uZXLy//zCBhBQcmFjdGl0aW9uZXJSb2xl8v/8wgYMT3JnYW5pemF0aW9u8v/8wgYHUGF0aWVudPL//MIGDVJlbGF0ZWRQZXJzb27y//zCBgZEZXZpY2USWwoIc3VwcGxpZXIYFCADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUIp8v/8wgYMT3JnYW5pemF0aW9u8v/8wgYRSGVhbHRoY2FyZVNlcnZpY2USOQoLcmVhc29uX2NvZGUYFSADKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdBKHAQoQcmVhc29uX3JlZmVyZW5jZRgWIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuUmVmZXJlbmNlQk3y//zCBglDb25kaXRpb27y//zCBgtPYnNlcnZhdGlvbvL//MIGEERpYWdub3N0aWNSZXBvcnTy//zCBhFEb2N1bWVudFJlZmVyZW5jZRJWCgxkZWxpdmVyX2Zyb20YFyABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUIg8v/8wgYMT3JnYW5pemF0aW9u8v/8wgYITG9jYXRpb24SYQoKZGVsaXZlcl90bxgYIAEoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuUmVmZXJlbmNlQi3y//zCBgxPcmdhbml6YXRpb27y//zCBghMb2NhdGlvbvL//MIGB1BhdGllbnQanAIKClN0YXR1c0NvZGUSQQoFdmFsdWUYASABKA4yMi5nb29nbGUuZmhpci5yNC5jb3JlLlN1cHBseVJlcXVlc3RTdGF0dXNDb2RlLlZhbHVlEicKAmlkGAIgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmcSMQoJZXh0ZW5zaW9uGAMgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb246b4r5g7IFMWh0dHA6Ly9obDcub3JnL2ZoaXIvVmFsdWVTZXQvc3VwcGx5cmVxdWVzdC1zdGF0dXPAn+O2BQGatY6TBixodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vY29kZRqWAgoMUHJpb3JpdHlDb2RlEj0KBXZhbHVlGAEgASgOMi4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZXF1ZXN0UHJpb3JpdHlDb2RlLlZhbHVlEicKAmlkGAIgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmcSMQoJZXh0ZW5zaW9uGAMgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb246a4r5g7IFLWh0dHA6Ly9obDcub3JnL2ZoaXIvVmFsdWVTZXQvcmVxdWVzdC1wcmlvcml0ecCf47YFAZq1jpMGLGh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9jb2RlGr0BCgVJdGVtWBJAChBjb2RlYWJsZV9jb25jZXB0GAEgASgLMiQuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlYWJsZUNvbmNlcHRIABJgCglyZWZlcmVuY2UYAiABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUIr8v/8wgYKTWVkaWNhdGlvbvL//MIGCVN1YnN0YW5jZfL//MIGBkRldmljZUgAOgagg4PoBgFCCAoGY2hvaWNlGosECglQYXJhbWV0ZXISJwoCaWQYASABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxIxCglleHRlbnNpb24YAiADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbhI6ChJtb2RpZmllcl9leHRlbnNpb24YAyADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbhIyCgRjb2RlGAQgASgLMiQuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlYWJsZUNvbmNlcHQSQgoFdmFsdWUYBSABKAsyMy5nb29nbGUuZmhpci5yNC5jb3JlLlN1cHBseVJlcXVlc3QuUGFyYW1ldGVyLlZhbHVlWBrtAQoGVmFsdWVYEkAKEGNvZGVhYmxlX2NvbmNlcHQYASABKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdEgAEjEKCHF1YW50aXR5GAIgASgLMh0uZ29vZ2xlLmZoaXIucjQuY29yZS5RdWFudGl0eUgAEisKBXJhbmdlGAMgASgLMhouZ29vZ2xlLmZoaXIucjQuY29yZS5SYW5nZUgAEi8KB2Jvb2xlYW4YBCABKAsyHC5nb29nbGUuZmhpci5yNC5jb3JlLkJvb2xlYW5IADoGoIOD6AYBQggKBmNob2ljZRqxAQoLT2NjdXJyZW5jZVgSMgoJZGF0ZV90aW1lGAEgASgLMh0uZ29vZ2xlLmZoaXIucjQuY29yZS5EYXRlVGltZUgAEi0KBnBlcmlvZBgCIAEoCzIbLmdvb2dsZS5maGlyLnI0LmNvcmUuUGVyaW9kSAASLQoGdGltaW5nGAMgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5UaW1pbmdIADoGoIOD6AYBQggKBmNob2ljZTpBwJ/jtgUDsv7klwY1aHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL1N1cHBseVJlcXVlc3RKBAgHEAhCfgoXY29tLmdvb2dsZS5maGlyLnI0LmNvcmVQAVpbZ2l0aHViLmNvbS9nb29nbGUvZmhpci9nby9wcm90by9nb29nbGUvZmhpci9wcm90by9yNC9jb3JlL3Jlc291cmNlcy9zdXBwbHlfcmVxdWVzdF9nb19wcm90b5jGsLUHBGIGcHJvdG8z", [wkt_1.file_google_protobuf_any, annotations_pb_1.file_proto_google_fhir_proto_annotations, codes_pb_1.file_proto_google_fhir_proto_r4_core_codes, datatypes_pb_1.file_proto_google_fhir_proto_r4_core_datatypes]);
+/**
+ * Describes the message google.fhir.r4.core.SupplyRequest.
+ * Use `create(SupplyRequestSchema)` to create a new message.
+ */
+exports.SupplyRequestSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_supply_request, 0);
+/**
+ * Describes the message google.fhir.r4.core.SupplyRequest.StatusCode.
+ * Use `create(SupplyRequest_StatusCodeSchema)` to create a new message.
+ */
+exports.SupplyRequest_StatusCodeSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_supply_request, 0, 0);
+/**
+ * Describes the message google.fhir.r4.core.SupplyRequest.PriorityCode.
+ * Use `create(SupplyRequest_PriorityCodeSchema)` to create a new message.
+ */
+exports.SupplyRequest_PriorityCodeSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_supply_request, 0, 1);
+/**
+ * Describes the message google.fhir.r4.core.SupplyRequest.ItemX.
+ * Use `create(SupplyRequest_ItemXSchema)` to create a new message.
+ */
+exports.SupplyRequest_ItemXSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_supply_request, 0, 2);
+/**
+ * Describes the message google.fhir.r4.core.SupplyRequest.Parameter.
+ * Use `create(SupplyRequest_ParameterSchema)` to create a new message.
+ */
+exports.SupplyRequest_ParameterSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_supply_request, 0, 3);
+/**
+ * Describes the message google.fhir.r4.core.SupplyRequest.Parameter.ValueX.
+ * Use `create(SupplyRequest_Parameter_ValueXSchema)` to create a new message.
+ */
+exports.SupplyRequest_Parameter_ValueXSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_supply_request, 0, 3, 0);
+/**
+ * Describes the message google.fhir.r4.core.SupplyRequest.OccurrenceX.
+ * Use `create(SupplyRequest_OccurrenceXSchema)` to create a new message.
+ */
+exports.SupplyRequest_OccurrenceXSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_supply_request, 0, 4);

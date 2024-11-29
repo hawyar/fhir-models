@@ -1,0 +1,45 @@
+"use strict";
+//    Copyright 2019 Google Inc.
+//
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//
+//        https://www.apache.org/licenses/LICENSE-2.0
+//
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CatalogEntry_RelatedEntry_RelationtypeCodeSchema = exports.CatalogEntry_RelatedEntrySchema = exports.CatalogEntry_StatusCodeSchema = exports.CatalogEntrySchema = exports.file_proto_google_fhir_proto_r4_core_resources_catalog_entry = void 0;
+var codegenv1_1 = require("@bufbuild/protobuf/codegenv1");
+var wkt_1 = require("@bufbuild/protobuf/wkt");
+var annotations_pb_1 = require("../../../annotations_pb");
+var codes_pb_1 = require("../codes_pb");
+var datatypes_pb_1 = require("../datatypes_pb");
+/**
+ * Describes the file proto/google/fhir/proto/r4/core/resources/catalog_entry.proto.
+ */
+exports.file_proto_google_fhir_proto_r4_core_resources_catalog_entry = (0, codegenv1_1.fileDesc)("Cj1wcm90by9nb29nbGUvZmhpci9wcm90by9yNC9jb3JlL3Jlc291cmNlcy9jYXRhbG9nX2VudHJ5LnByb3RvEhNnb29nbGUuZmhpci5yNC5jb3JlIsUSCgxDYXRhbG9nRW50cnkSIwoCaWQYASABKAsyFy5nb29nbGUuZmhpci5yNC5jb3JlLklkEicKBG1ldGEYAiABKAsyGS5nb29nbGUuZmhpci5yNC5jb3JlLk1ldGESMAoOaW1wbGljaXRfcnVsZXMYAyABKAsyGC5nb29nbGUuZmhpci5yNC5jb3JlLlVyaRIrCghsYW5ndWFnZRgEIAEoCzIZLmdvb2dsZS5maGlyLnI0LmNvcmUuQ29kZRIsCgR0ZXh0GAUgASgLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5OYXJyYXRpdmUSJwoJY29udGFpbmVkGAYgAygLMhQuZ29vZ2xlLnByb3RvYnVmLkFueRIxCglleHRlbnNpb24YCCADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbhI6ChJtb2RpZmllcl9leHRlbnNpb24YCSADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbhIzCgppZGVudGlmaWVyGAogAygLMh8uZ29vZ2xlLmZoaXIucjQuY29yZS5JZGVudGlmaWVyEjIKBHR5cGUYCyABKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdBI3CglvcmRlcmFibGUYDCABKAsyHC5nb29nbGUuZmhpci5yNC5jb3JlLkJvb2xlYW5CBvDQh+sEARKYAgoPcmVmZXJlbmNlZF9pdGVtGA0gASgLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VC3gHw0IfrBAHy//zCBgpNZWRpY2F0aW9u8v/8wgYGRGV2aWNl8v/8wgYMT3JnYW5pemF0aW9u8v/8wgYMUHJhY3RpdGlvbmVy8v/8wgYQUHJhY3RpdGlvbmVyUm9sZfL//MIGEUhlYWx0aGNhcmVTZXJ2aWNl8v/8wgYSQWN0aXZpdHlEZWZpbml0aW9u8v/8wgYOUGxhbkRlZmluaXRpb27y//zCBhJTcGVjaW1lbkRlZmluaXRpb27y//zCBhVPYnNlcnZhdGlvbkRlZmluaXRpb27y//zCBgZCaW5hcnkSPgoVYWRkaXRpb25hbF9pZGVudGlmaWVyGA4gAygLMh8uZ29vZ2xlLmZoaXIucjQuY29yZS5JZGVudGlmaWVyEjwKDmNsYXNzaWZpY2F0aW9uGA8gAygLMiQuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlYWJsZUNvbmNlcHQSPAoGc3RhdHVzGBAgASgLMiwuZ29vZ2xlLmZoaXIucjQuY29yZS5DYXRhbG9nRW50cnkuU3RhdHVzQ29kZRI0Cg92YWxpZGl0eV9wZXJpb2QYESABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlBlcmlvZBIvCgh2YWxpZF90bxgSIAEoCzIdLmdvb2dsZS5maGlyLnI0LmNvcmUuRGF0ZVRpbWUSMwoMbGFzdF91cGRhdGVkGBMgASgLMh0uZ29vZ2xlLmZoaXIucjQuY29yZS5EYXRlVGltZRJHChlhZGRpdGlvbmFsX2NoYXJhY3RlcmlzdGljGBQgAygLMiQuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlYWJsZUNvbmNlcHQSRwoZYWRkaXRpb25hbF9jbGFzc2lmaWNhdGlvbhgVIAMoCzIkLmdvb2dsZS5maGlyLnI0LmNvcmUuQ29kZWFibGVDb25jZXB0EkUKDXJlbGF0ZWRfZW50cnkYFiADKAsyLi5nb29nbGUuZmhpci5yNC5jb3JlLkNhdGFsb2dFbnRyeS5SZWxhdGVkRW50cnkamAIKClN0YXR1c0NvZGUSPwoFdmFsdWUYASABKA4yMC5nb29nbGUuZmhpci5yNC5jb3JlLlB1YmxpY2F0aW9uU3RhdHVzQ29kZS5WYWx1ZRInCgJpZBgCIAEoCzIbLmdvb2dsZS5maGlyLnI0LmNvcmUuU3RyaW5nEjEKCWV4dGVuc2lvbhgDIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uOm2K+YOyBS9odHRwOi8vaGw3Lm9yZy9maGlyL1ZhbHVlU2V0L3B1YmxpY2F0aW9uLXN0YXR1c8Cf47YFAZq1jpMGLGh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9jb2RlGvAECgxSZWxhdGVkRW50cnkSJwoCaWQYASABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxIxCglleHRlbnNpb24YAiADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbhI6ChJtb2RpZmllcl9leHRlbnNpb24YAyADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbhJdCgxyZWxhdGlvbnR5cGUYBCABKAsyPy5nb29nbGUuZmhpci5yNC5jb3JlLkNhdGFsb2dFbnRyeS5SZWxhdGVkRW50cnkuUmVsYXRpb250eXBlQ29kZUIG8NCH6wQBEkYKBGl0ZW0YBSABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUIY8NCH6wQB8v/8wgYMQ2F0YWxvZ0VudHJ5GqACChBSZWxhdGlvbnR5cGVDb2RlEkYKBXZhbHVlGAEgASgOMjcuZ29vZ2xlLmZoaXIucjQuY29yZS5DYXRhbG9nRW50cnlSZWxhdGlvblR5cGVDb2RlLlZhbHVlEicKAmlkGAIgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmcSMQoJZXh0ZW5zaW9uGAMgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5FeHRlbnNpb246aIr5g7IFKmh0dHA6Ly9obDcub3JnL2ZoaXIvVmFsdWVTZXQvcmVsYXRpb24tdHlwZcCf47YFAZq1jpMGLGh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9jb2RlOkDAn+O2BQOy/uSXBjRodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vQ2F0YWxvZ0VudHJ5SgQIBxAIQn0KF2NvbS5nb29nbGUuZmhpci5yNC5jb3JlUAFaWmdpdGh1Yi5jb20vZ29vZ2xlL2ZoaXIvZ28vcHJvdG8vZ29vZ2xlL2ZoaXIvcHJvdG8vcjQvY29yZS9yZXNvdXJjZXMvY2F0YWxvZ19lbnRyeV9nb19wcm90b5jGsLUHBGIGcHJvdG8z", [wkt_1.file_google_protobuf_any, annotations_pb_1.file_proto_google_fhir_proto_annotations, codes_pb_1.file_proto_google_fhir_proto_r4_core_codes, datatypes_pb_1.file_proto_google_fhir_proto_r4_core_datatypes]);
+/**
+ * Describes the message google.fhir.r4.core.CatalogEntry.
+ * Use `create(CatalogEntrySchema)` to create a new message.
+ */
+exports.CatalogEntrySchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_catalog_entry, 0);
+/**
+ * Describes the message google.fhir.r4.core.CatalogEntry.StatusCode.
+ * Use `create(CatalogEntry_StatusCodeSchema)` to create a new message.
+ */
+exports.CatalogEntry_StatusCodeSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_catalog_entry, 0, 0);
+/**
+ * Describes the message google.fhir.r4.core.CatalogEntry.RelatedEntry.
+ * Use `create(CatalogEntry_RelatedEntrySchema)` to create a new message.
+ */
+exports.CatalogEntry_RelatedEntrySchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_catalog_entry, 0, 1);
+/**
+ * Describes the message google.fhir.r4.core.CatalogEntry.RelatedEntry.RelationtypeCode.
+ * Use `create(CatalogEntry_RelatedEntry_RelationtypeCodeSchema)` to create a new message.
+ */
+exports.CatalogEntry_RelatedEntry_RelationtypeCodeSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_catalog_entry, 0, 1, 0);

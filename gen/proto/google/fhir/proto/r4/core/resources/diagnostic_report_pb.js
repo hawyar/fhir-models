@@ -1,0 +1,45 @@
+"use strict";
+//    Copyright 2019 Google Inc.
+//
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+//
+//        https://www.apache.org/licenses/LICENSE-2.0
+//
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiagnosticReport_MediaSchema = exports.DiagnosticReport_EffectiveXSchema = exports.DiagnosticReport_StatusCodeSchema = exports.DiagnosticReportSchema = exports.file_proto_google_fhir_proto_r4_core_resources_diagnostic_report = void 0;
+var codegenv1_1 = require("@bufbuild/protobuf/codegenv1");
+var wkt_1 = require("@bufbuild/protobuf/wkt");
+var annotations_pb_1 = require("../../../annotations_pb");
+var codes_pb_1 = require("../codes_pb");
+var datatypes_pb_1 = require("../datatypes_pb");
+/**
+ * Describes the file proto/google/fhir/proto/r4/core/resources/diagnostic_report.proto.
+ */
+exports.file_proto_google_fhir_proto_r4_core_resources_diagnostic_report = (0, codegenv1_1.fileDesc)("CkFwcm90by9nb29nbGUvZmhpci9wcm90by9yNC9jb3JlL3Jlc291cmNlcy9kaWFnbm9zdGljX3JlcG9ydC5wcm90bxITZ29vZ2xlLmZoaXIucjQuY29yZSL3EwoQRGlhZ25vc3RpY1JlcG9ydBIjCgJpZBgBIAEoCzIXLmdvb2dsZS5maGlyLnI0LmNvcmUuSWQSJwoEbWV0YRgCIAEoCzIZLmdvb2dsZS5maGlyLnI0LmNvcmUuTWV0YRIwCg5pbXBsaWNpdF9ydWxlcxgDIAEoCzIYLmdvb2dsZS5maGlyLnI0LmNvcmUuVXJpEisKCGxhbmd1YWdlGAQgASgLMhkuZ29vZ2xlLmZoaXIucjQuY29yZS5Db2RlEiwKBHRleHQYBSABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLk5hcnJhdGl2ZRInCgljb250YWluZWQYBiADKAsyFC5nb29nbGUucHJvdG9idWYuQW55EjEKCWV4dGVuc2lvbhgIIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEjoKEm1vZGlmaWVyX2V4dGVuc2lvbhgJIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuRXh0ZW5zaW9uEjMKCmlkZW50aWZpZXIYCiADKAsyHy5nb29nbGUuZmhpci5yNC5jb3JlLklkZW50aWZpZXISnwEKCGJhc2VkX29uGAsgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCbfL//MIGCENhcmVQbGFu8v/8wgYaSW1tdW5pemF0aW9uUmVjb21tZW5kYXRpb27y//zCBhFNZWRpY2F0aW9uUmVxdWVzdPL//MIGDk51dHJpdGlvbk9yZGVy8v/8wgYOU2VydmljZVJlcXVlc3QSSAoGc3RhdHVzGAwgASgLMjAuZ29vZ2xlLmZoaXIucjQuY29yZS5EaWFnbm9zdGljUmVwb3J0LlN0YXR1c0NvZGVCBvDQh+sEARI2CghjYXRlZ29yeRgNIAMoCzIkLmdvb2dsZS5maGlyLnI0LmNvcmUuQ29kZWFibGVDb25jZXB0EjoKBGNvZGUYDiABKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdEIG8NCH6wQBEmMKB3N1YmplY3QYDyABKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUIy8v/8wgYHUGF0aWVudPL//MIGBUdyb3Vw8v/8wgYGRGV2aWNl8v/8wgYITG9jYXRpb24SQgoJZW5jb3VudGVyGBAgASgLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCD/L//MIGCUVuY291bnRlchJDCgllZmZlY3RpdmUYESABKAsyMC5nb29nbGUuZmhpci5yNC5jb3JlLkRpYWdub3N0aWNSZXBvcnQuRWZmZWN0aXZlWBIsCgZpc3N1ZWQYEiABKAsyHC5nb29nbGUuZmhpci5yNC5jb3JlLkluc3RhbnQSewoJcGVyZm9ybWVyGBMgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCSPL//MIGDFByYWN0aXRpb25lcvL//MIGEFByYWN0aXRpb25lclJvbGXy//zCBgxPcmdhbml6YXRpb27y//zCBghDYXJlVGVhbRKFAQoTcmVzdWx0c19pbnRlcnByZXRlchgUIAMoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuUmVmZXJlbmNlQkjy//zCBgxQcmFjdGl0aW9uZXLy//zCBhBQcmFjdGl0aW9uZXJSb2xl8v/8wgYMT3JnYW5pemF0aW9u8v/8wgYIQ2FyZVRlYW0SQAoIc3BlY2ltZW4YFSADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUIO8v/8wgYIU3BlY2ltZW4SQQoGcmVzdWx0GBYgAygLMh4uZ29vZ2xlLmZoaXIucjQuY29yZS5SZWZlcmVuY2VCEfL//MIGC09ic2VydmF0aW9uEkkKDWltYWdpbmdfc3R1ZHkYFyADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLlJlZmVyZW5jZUIS8v/8wgYMSW1hZ2luZ1N0dWR5EjoKBW1lZGlhGBggAygLMisuZ29vZ2xlLmZoaXIucjQuY29yZS5EaWFnbm9zdGljUmVwb3J0Lk1lZGlhEi8KCmNvbmNsdXNpb24YGSABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxI9Cg9jb25jbHVzaW9uX2NvZGUYGiADKAsyJC5nb29nbGUuZmhpci5yNC5jb3JlLkNvZGVhYmxlQ29uY2VwdBI3Cg5wcmVzZW50ZWRfZm9ybRgbIAMoCzIfLmdvb2dsZS5maGlyLnI0LmNvcmUuQXR0YWNobWVudBqjAgoKU3RhdHVzQ29kZRJECgV2YWx1ZRgBIAEoDjI1Lmdvb2dsZS5maGlyLnI0LmNvcmUuRGlhZ25vc3RpY1JlcG9ydFN0YXR1c0NvZGUuVmFsdWUSJwoCaWQYAiABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxIxCglleHRlbnNpb24YAyADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbjpzivmDsgU1aHR0cDovL2hsNy5vcmcvZmhpci9WYWx1ZVNldC9kaWFnbm9zdGljLXJlcG9ydC1zdGF0dXPAn+O2BQGatY6TBixodHRwOi8vaGw3Lm9yZy9maGlyL1N0cnVjdHVyZURlZmluaXRpb24vY29kZRqBAQoKRWZmZWN0aXZlWBIyCglkYXRlX3RpbWUYASABKAsyHS5nb29nbGUuZmhpci5yNC5jb3JlLkRhdGVUaW1lSAASLQoGcGVyaW9kGAIgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5QZXJpb2RIADoGoIOD6AYBQggKBmNob2ljZRqOAgoFTWVkaWESJwoCaWQYASABKAsyGy5nb29nbGUuZmhpci5yNC5jb3JlLlN0cmluZxIxCglleHRlbnNpb24YAiADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbhI6ChJtb2RpZmllcl9leHRlbnNpb24YAyADKAsyHi5nb29nbGUuZmhpci5yNC5jb3JlLkV4dGVuc2lvbhIsCgdjb21tZW50GAQgASgLMhsuZ29vZ2xlLmZoaXIucjQuY29yZS5TdHJpbmcSPwoEbGluaxgFIAEoCzIeLmdvb2dsZS5maGlyLnI0LmNvcmUuUmVmZXJlbmNlQhHw0IfrBAHy//zCBgVNZWRpYTpEwJ/jtgUDsv7klwY4aHR0cDovL2hsNy5vcmcvZmhpci9TdHJ1Y3R1cmVEZWZpbml0aW9uL0RpYWdub3N0aWNSZXBvcnRKBAgHEAhCgQEKF2NvbS5nb29nbGUuZmhpci5yNC5jb3JlUAFaXmdpdGh1Yi5jb20vZ29vZ2xlL2ZoaXIvZ28vcHJvdG8vZ29vZ2xlL2ZoaXIvcHJvdG8vcjQvY29yZS9yZXNvdXJjZXMvZGlhZ25vc3RpY19yZXBvcnRfZ29fcHJvdG+YxrC1BwRiBnByb3RvMw", [wkt_1.file_google_protobuf_any, annotations_pb_1.file_proto_google_fhir_proto_annotations, codes_pb_1.file_proto_google_fhir_proto_r4_core_codes, datatypes_pb_1.file_proto_google_fhir_proto_r4_core_datatypes]);
+/**
+ * Describes the message google.fhir.r4.core.DiagnosticReport.
+ * Use `create(DiagnosticReportSchema)` to create a new message.
+ */
+exports.DiagnosticReportSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_diagnostic_report, 0);
+/**
+ * Describes the message google.fhir.r4.core.DiagnosticReport.StatusCode.
+ * Use `create(DiagnosticReport_StatusCodeSchema)` to create a new message.
+ */
+exports.DiagnosticReport_StatusCodeSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_diagnostic_report, 0, 0);
+/**
+ * Describes the message google.fhir.r4.core.DiagnosticReport.EffectiveX.
+ * Use `create(DiagnosticReport_EffectiveXSchema)` to create a new message.
+ */
+exports.DiagnosticReport_EffectiveXSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_diagnostic_report, 0, 1);
+/**
+ * Describes the message google.fhir.r4.core.DiagnosticReport.Media.
+ * Use `create(DiagnosticReport_MediaSchema)` to create a new message.
+ */
+exports.DiagnosticReport_MediaSchema = (0, codegenv1_1.messageDesc)(exports.file_proto_google_fhir_proto_r4_core_resources_diagnostic_report, 0, 2);
